@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Dashboard</title>
+        <!-- fontawesome css1  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap css1 js2  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- custom css  -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <!-- START NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" class="navbar-toggler bg-light m-2 ms-auto" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="mynavbar" class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Start Left Side Bar -->
+                        <div class="col-xl-2 col-lg-3 col-md-4 fixed-top leftsidebars">
+                            <a href="index.html" class="navbar-brand d-block border-bottom text-center mb-1" style="font-size: 1.5rem;">Frest Admin</a>
+
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-home me-2"></i><span>Dashboard</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fab fa-apple fa-lg me-2"></i>APPS</a></li>
+                                <li class="nav-item ms-4">
+                                    <ul class="navbar-nav flex-column">
+                                        <li class="nav-iem"><a href="#" class="nav-link"><i class="far fa-envelope me-2"></i>Email <span class="badge bg-danger rounded-pill d-inline-block ms-5">4</span></a></li>
+                                        <li class="nav-iem"><a href="#" class="nav-link"><i class="fab fa-whatsapp me-2"></i>Chat</a></li>
+                                        <li class="nav-iem"><a href="#" class="nav-link"><i class="far fa-check-square me-2"></i><span>Todo</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-iem"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="far fa-calendar-check me-2"></i><span>Calender</span></a></li>
+                                <li class="nav-iem"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-store me-2"></i><span>Ecommerce</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-user-edit me-2"></i><span>Content</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-fill-drip me-2"></i><span>Colors</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-icons me-2"></i><span>Icons</span></a></li>
+
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-table fa-lg me-2"></i>Return</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-truck fa-lg me-2"></i>Delivery</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link p-2 mb-1 siberlinks"><i class="fas fa-wrench fa-lg me-2"></i>Settings</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- End Left Side Bar -->
+
+                        <!-- Start Top Side Bar -->
+                        <div class="col-xl-10 col-lg-9 col-md-8 fixed-top ms-auto topsidebars">
+                            <div class="row align-items-center">
+                                    <div class="col-lg-9 col-sm-7"></div>
+                                    <div class="col-lg-2 col-sm-4">                                
+                                        <ul class="navbar-nav logins">
+                                            <li class="nav-item"><a href="#" class="nav-link p-3"><i class="fas fa-user-circle fa-lg me-1"></i><i class="fas fa-caret-down"></i></a></li>                                           
+                                            <li>
+                                                <div class="d-flex text-center">
+                                                    <img src="./assets/resources/user1.jpg" width="30px" class="mt-2 me-2 topsideimgs" alt="">
+                                                    <p class="m-0 p-0"><span>David</span><br><small class="text-success">active</small></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-1 col-sm-1">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item ms-md-auto"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#signout"><i class="fas fa-sign-out-alt text-secondary fa-lg"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Top Side Bar -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+
+        <!-- START TASK SECTION -->
+        <section>
+            <div class="container-fluid">
+                <div class="row mt-3">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row mt-lg-5">
+
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card mb-2 cardcommons">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clipboard-list fa-4x text-info me-2"></i>
+                                            <div>
+                                                <p class="m-0">Total Tasks</p>
+                                                <spam class="display-6">34</spam>
+                                            </div>
+                                            <p class="ms-auto text-danger">-25%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card mb-2 cardcommons">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clipboard-list fa-4x text-warning me-2"></i>
+                                            <div>
+                                                <p class="m-0">Tasks to do</p>
+                                                <spam class="display-6">14</spam>
+                                            </div>
+                                            <p class="ms-auto text-success">+10%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card mb-2 cardcommons">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clipboard-list fa-4x text-danger me-2"></i>
+                                            <div>
+                                                <p class="m-0">Tasks Overdue</p>
+                                                <spam class="display-6">5</spam>
+                                            </div>
+                                            <p class="ms-auto text-danger">-10%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card mb-2 cardcommons">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clipboard-list fa-4x text-success me-2"></i>
+                                            <div>
+                                                <p class="m-0">Completed Tasks</p>
+                                                <spam class="display-6">7</spam>
+                                            </div>
+                                            <p class="ms-auto text-success">+20%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END TASK SECTION -->
+
+        <!-- START BEST SELLER SECTION  -->
+        <section>
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <div class="bg-light">
+                                    <p class="border-bottom p-2">Best Sellers</p>
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <img src="./assets/resources/shower.jpg" class="ms-2 cardimgs" alt="">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5>Bathing Shampoo</h5>
+                                            <div class="progress me-2" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 60%;"></div>
+                                            </div>
+                                            <span>80,451 sales</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <img src="./assets/resources/shanpo.jpg" class="ms-2 cardimgs" alt="">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5>Bathing Shampoo</h5>
+                                            <div class="progress me-2" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 50%;"></div>
+                                            </div>
+                                            <span>15,451 sales</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-2">
+                                            <img src="./assets/resources/tissue.jpg" class="ms-2 cardimgs" alt="">
+                                        </div>
+                                        <div class="col-10">
+                                            <h5>Toilet Paper</h5>
+                                            <div class="progress me-2" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 40%;"></div>
+                                            </div>
+                                            <span>11,451 sales</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="./assets/resources/sneaker.jpg" class="ms-2 cardimgs" alt="">
+                                        </div>
+                                        <div class="col-10 mb-4">
+                                            <h5>Running Shoes</h5>
+                                            <div class="progress me-2" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 35%;"></div>
+                                            </div>
+                                            <span>99,451 sales</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="bg-light">
+                                    <p class="border-bottom p-2">Best Sellers</p>
+                                    <div class="row mb-3">                                        
+                                        <div class="col-12 mb-3">
+                                            <div class="d-flex justify-content-between mx-3"><h5>Bathing Shampoo</h5><span>80,451 sales</span></div>
+                                            <div class="progress mx-3" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 60%;"></div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">                                       
+                                        <div class="col-12 mb-3">
+                                            <div class="d-flex justify-content-between mx-3"><h5>Bathing Shampoo</h5><span>15,451 sales</span></div>
+                                            <div class="progress mx-3" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 50%;"></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">                                        
+                                        <div class="col-12 mb-3">
+                                            <div class="d-flex justify-content-between mx-3"><h5>Toilet Paper</h5><span>11,451 sales</span></div>
+                                            <div class="progress mx-3" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 40%;"></div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">                                       
+                                        <div class="col-12 mb-2">
+                                            <div class="d-flex justify-content-between mx-3"><h5>Running Shoes</h5><span>10,451 sales</span></div>
+                                            <div class="progress mx-3" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 35%;"></div>
+                                            </div>          
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">                                       
+                                        <div class="col-12 mb-3">
+                                            <div class="d-flex justify-content-between mx-3"><h5>Handsaniter</h5><span>1,451 sales</span></div>
+                                            <div class="progress mx-3" style="height: 3px;">
+                                                <div class="progress-bar bg-primary" style="width: 15%;"></div>
+                                            </div>          
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END BEST SELLER SECTION  -->
+
+        <!-- START PRODUCTS SECTION  -->
+        <section class="mt-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="bg-light">
+                                    <p class="p-2 border-bottom">Products</p>
+                                    <table class="table table-striped table-hover align-middle">
+                                        <thead class="text-secondary">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Product</th>
+                                                <th>In Stock</th>
+                                                <th>Price</th>
+                                                <th>Scales</th>
+                                                <th>Views</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="">
+                                            <tr>
+                                                <td>35611</td>
+                                                <td>
+                                                    <img src="./assets/resources/shower.jpg" class="cardimgs" alt="">
+                                                    <span>Bathing Shampoo</span>
+                                                </td>
+                                                <td>451</td>
+                                                <td>$654</td>
+                                                <td>822</td>
+                                                <td>80,451</td>
+                                                <td><span class="btn btn-outline-secondary btn-sm">View</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>35612</td>
+                                                <td>
+                                                    <img src="./assets/resources/tissue.jpg" class="cardimgs" alt="">
+                                                    <span>Toilet Paper</span>
+                                                </td>
+                                                <td>451</td>
+                                                <td>$654</td>
+                                                <td>822</td>
+                                                <td>80,451</td>
+                                                <td><span class="btn btn-outline-secondary btn-sm">View</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>35613</td>
+                                                <td>
+                                                    <img src="./assets/resources/shanpo.jpg" class="cardimgs" alt="">
+                                                    <span>Bathing Shampoo</span>
+                                                </td>
+                                                <td>454</td>
+                                                <td>$654</td>
+                                                <td>822</td>
+                                                <td>80,451</td>
+                                                <td><span class="btn btn-outline-secondary btn-sm">View</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>35615</td>
+                                                <td>
+                                                    <img src="./assets/resources/sneaker.jpg" class="cardimgs" alt="">
+                                                    <span>Running Shoes</span>
+                                                </td>
+                                                <td>451</td>
+                                                <td>$654</td>
+                                                <td>822</td>
+                                                <td>80,451</td>
+                                                <td><span class="btn btn-outline-secondary btn-sm">View</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- start pagination -->
+                         <nav>
+                            <ul class="pagination pagination-sm justify-content-center">
+                                <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>Previous</span></a></li>
+                                <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>1</span></a></li>
+                                <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>2</span></a></li>
+                                <li class="page-item active"><a href="#" class="page-link py-2 px-3"><span>3</span></a></li>
+                                <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>Next</span></a></li>
+                            </ul>
+                        </nav>
+                        <!-- end pagination -->
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- START PRODUCTS SECTION  -->
+
+        <!-- START USER SECTION  -->
+        <section class="m-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card mb-3 boxshadows">
+                                    <div class="card-title border-bottom">
+                                        <h5 class="text-secondary p-2">Activity Feed</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user1.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-secondary ms-1"><span class="text-dark fw-bold">Peter</span> ordered <span class="text-dark fw-bold">Toiled</span> paper.</p>
+                                                <span class="text-secondary  ms-1">2 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user3.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-secondary ms-1"><span class="text-dark fw-bold">Tommy</span> disliked and commented ...</p>
+                                                <span class="text-secondary ms-1">3 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user2.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-secondary ms-1"><span class="text-dark fw-bold">Peter</span> added 12 new products ...</p>
+                                                <span class="text-secondary ms-1">1 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user4.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-secondary ms-1"><span class="text-dark fw-bold">Tom</span> commented on <span class="text-dark fw-bold">Peter's</span> ...</p>
+                                                <span class="text-secondary ms-1">2 hours ago</span>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card boxshadows">
+                                    <div class="card-title border-bottom">
+                                        <h5 class="text-secondary p-2">New Users</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user5.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-dark fw-bold ms-1">Peter</p>
+                                                <span class="text-secondary ms-1">2 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user8.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-dark fw-bold ms-1">Jim Halpet</p>
+                                                <span class="text-secondary ms-1">3 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user7.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-dark fw-bold ms-1">Tommy Nay</p>
+                                                <span class="text-secondary ms-1">1 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="./assets/resources/user9.jpg" class="cardimgs" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="text-dark fw-bold ms-1">Messi</p>
+                                                <span class="text-secondary ms-1">1 hours ago</span>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- START USER SECTION  -->
+
+        <!-- START TASK AND SALES SECTION -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="card">
+                                    <div class="card-title border-bottom">
+                                        <h5 class="text-secondary p-2 mt-2">Tasks</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row mb-3">
+                                                <div class="col-1">
+                                                    <div class="borders mx-auto"></div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <form action="">
+                                                        <div class="d-flex align-items-center">
+                                                            <input type="checkbox" name="check1" id="check1" class="form-check" checked/>
+                                                            <label for="check1" class="ms-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                                                        </div>
+                                                    </form>
+                                                </div>                                               
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-1">
+                                                    <div class="bg-success borders mx-auto"></div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <form action="">
+                                                        <div class="d-flex align-items-center">
+                                                            <input type="checkbox" name="check1" id="check1" class="form-check"/>
+                                                            <label for="check1" class="ms-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                                                        </div>
+                                                    </form>
+                                                </div>                                               
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-1">
+                                                    <div class="bg-danger borders mx-auto"></div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <form action="">
+                                                        <div class="d-flex align-items-center">
+                                                            <input type="checkbox" name="check1" id="check1" class="form-check"/>
+                                                            <label for="check1" class="ms-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                                                        </div>
+                                                    </form>
+                                                </div>                                               
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-1">
+                                                    <div class="bg-warning borders mx-auto"></div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <form action="">
+                                                        <div class="d-flex align-items-center">
+                                                            <input type="checkbox" name="check1" id="check1" class="form-check" checked/>
+                                                            <label for="check1" class="ms-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                                                        </div>
+                                                    </form>
+                                                </div>                                               
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-1">
+                                                    <div class="bg-secondary borders mx-auto"></div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <form action="">
+                                                        <div class="d-flex align-items-center">
+                                                            <input type="checkbox" name="check1" id="check1" class="form-check"/>
+                                                            <label for="check1" class="ms-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                                                        </div>
+                                                    </form>
+                                                </div>                                               
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 mt-3 align-self-center">
+                                <div class="card">
+                                    <div class="card-title">
+                                        <h5 class="text-secondary px-3 pt-3 m-0">Sales History</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-8 text-secondary">
+                                                <h6 class="m-0 p-0">Running Shoes</h6>
+                                                <small class="text-muted">50min ago</small>
+                                            </div>
+                                            <div class="col-4 align-self-center  text-end">
+                                                <h6 class="">+$10.70</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-8 text-secondary">
+                                                <h6 class="m-0 p-0">Toilet Paper</h6>
+                                                <small class="text-muted">35min ago</small>
+                                            </div>
+                                            <div class="col-4 align-self-center text-end">
+                                                <h6 class="">+$11</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-8 text-secondary">
+                                                <h6 class="m-0 p-0">Bathing Shampoo</h6>
+                                                <small class="text-muted">30min ago</small>
+                                            </div>
+                                            <div class="col-4 align-self-center text-end">
+                                                <h6 class="">+$15.70</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h5 class="text-secondary">Total Sales</h5>
+                                        <span>$82,000.95</span>
+                                        <div class="progress mb-3" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" style="width: 60%;" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END TASK AND SALES SECTION -->
+
+        <!-- START FOOTER SECTION  -->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class="mt-3">&copy; <span id="getyears"></span> Copyright, All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER SECTION  -->
+
+        <!-- START MODAL AREA  -->
+
+        <!-- Start Signout Modal  -->
+        <div id="signout" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Want To Leave?</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>                    
+                    <div class="modal-footer">                        
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Signout Modal  -->
+        <!-- END MODAL AREA  -->
+
+        
+        <!-- bootstrap css1 js2  -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <!-- custom js  -->
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+body{
+    background-color: #eee;
+}
+/* START NAVBAR */
+.leftsidebars{
+    background-color: #eee;
+    height: 100vh;
+    box-shadow: 1px 0 3px #777;
+    font-size: 1.2rem;
+}
+
+.topsidebars{
+    background-color: #eee;
+    box-shadow: 1px 0 3px #777;
+}
+
+.topsideimgs{
+    height: 30px;
+    border-radius: 50%;
+}
+
+@media (max-width:760px) {
+    .leftsidebars{
+        height: auto;
+        position: static;
+    }
+    .topsidebars{
+        position: static;
+    }
+    .logins{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* END NAVBAR */
+
+/* START TASKS SECTION  */
+.cardcommons{
+    box-shadow: 2px 3px 5px #777;
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+.cardcommons:hover{
+    transform: scale(1.01);
+}
+/* END TASKS SECTION  */
+
+/* START BEST SELLER SECTION  */
+.cardimgs{
+    width: 70px;
+    height: 60px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+/* END BEST SELLER SECTION  */
+
+/* START USER SECTION  */
+.boxshadows{
+    box-shadow: 10px 5px 15px #999;
+}
+/* END USER SECTION  */
+
+/* START TASKS & SALES SECTION  */
+.borders{
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+    border-radius: 2px;
+}
+/* END TASKS & SALES SECTION  */
